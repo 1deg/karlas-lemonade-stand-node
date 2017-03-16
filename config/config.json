@@ -1,0 +1,19 @@
+{
+  "development": {
+    "database": "lemonade_development",
+    "dialect": "sqlite",
+    "storage": "lemonade.db"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "lemonade_test",
+    "dialect": "sqlite"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "lemonade_production",
+    "dialect": "sqlite"
+  }
+}

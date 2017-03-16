@@ -1,0 +1,24 @@
+<h2>Lemonade Types</h2>
+
+<p><a href="/lemonade-types/new">New type</a> | <a href="/">Back to Purchases</a></p>
+
+<p ng-if="lemonadeTypes.length == 0"><em>No lemonade types yet!</em></p>
+
+<table class="table table-striped" ng-if="lemonadeTypes.length > 0">
+  <thead>
+    <th>ID</th>
+    <th>Label</th>
+    <th>Color</th>
+    <th>Price</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="lemonadeType in lemonadeTypes">
+      <td>{{ lemonadeType.id }}</td>
+      <td>{{ lemonadeType.label }}</td>
+      <td>{{ lemonadeType.color }}</td>
+      <td>{{ lemonadeType.price | currency }}</td>
+      <td><a href="#" ng-click="delete(lemonadeType.id)">Delete</a></td>
+    </tr>
+  </tbody>
+</table>

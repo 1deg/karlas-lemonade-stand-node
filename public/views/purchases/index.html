@@ -1,0 +1,39 @@
+<h2>Purchases</h2>
+
+<p><a href="/purchases/new">Record purchase</a> | <a href="/lemonade-types">Lemonade Types</a></p>
+
+<p ng-if="purchases.length == 0"><em>No sales yet!</em></p>
+
+<table class="table table-striped" ng-if="purchases.length > 0">
+  <thead>
+    <th>Purchase ID</th>
+    <th>Purchase date/time</th>
+    <th>Lemonade Type</th>
+    <th>Quantity</th>
+    <th>Sale total</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="purchase in purchases">
+      <td>{{ purchase.id }}</td>
+      <td>{{ purchase.createdAt | date: 'short' }}</td>
+      <td>{{ purchase.LemonadeType.label }}</td>
+      <td>{{ purchase.quantity }}</td>
+      <td>{{ purchase.quantity * purchase.LemonadeType.price | currency }}</td>
+      <td><a href="#" ng-click="delete(purchase.id)">Delete</a></td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <strong>
+          Total sales
+        </strong>
+      </td>
+      <td>
+        <strong>
+          {{ total | currency }}
+        </strong>
+      </td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

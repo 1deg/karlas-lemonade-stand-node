@@ -1,0 +1,28 @@
+<h2>New Purchase</h2>
+
+<div class="row">
+  <div class="col-sm-4">
+
+    <form>
+      
+      <div class="form-group">
+        <label>Quantity</label>
+        <input type="number" ng-model="purchase.quantity" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label>Lemonade Type</label>
+        <select ng-model="purchase.LemonadeTypeId" class="form-control">
+          <option ng-repeat="lemonadeType in lemonadeTypes" ng-value="lemonadeType.id">{{ lemonadeType.label }}</option>
+        </select>
+      </div>
+     
+      <p>
+        <button type="button" ng-click="create()" class="btn btn-primary">Add Purchase</button>
+        <a href="/" class="btn btn-default">Cancel</a>
+      </p>
+
+    </form>
+
+  </div>
+</div>

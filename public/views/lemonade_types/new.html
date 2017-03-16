@@ -1,0 +1,33 @@
+<h2>New Lemonade Type</h2>
+
+<div class="row">
+  <div class="col-sm-4">
+
+    <form>
+      
+      <div class="form-group">
+        <label for="label">Label</label>
+        <input type="text" name="label" ng-model="lemonadeType.label" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label for="color">Color</label>
+        <select ng-model="lemonadeType.color" class="form-control" name="color">
+          <option ng-repeat="colorOption in colorOptions" ng-value="colorOption">{{ colorOption }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" name="price" ng-model="lemonadeType.price" class="form-control" />
+      </div>
+     
+      <p>
+        <button type="button" ng-click="create()" class="btn btn-primary">Add Lemonade Type</button>
+        <a href="/" class="btn btn-default">Cancel</a>
+      </p>
+
+    </form>
+
+  </div>
+</div>
