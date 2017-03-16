@@ -1,2 +1,3 @@
-# karlas-lemonade-stand-node
-Karla’s Lemonade Stand - One Degree interview app. (node version)
+# Karla’s Lemonade Stand application
+
+Karla runs a lemonade stand and needs a way to track her cashflow. The application already has a way to track her revenue -- the types of lemonades that are sold, and at what price.
